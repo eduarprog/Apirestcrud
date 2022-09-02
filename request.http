@@ -1,0 +1,118 @@
+// Probando peticiones para el crud de profesores
+###
+GET http://localhost:9000/api HTTP/1.1
+
+
+###
+POST http://localhost:9000/api HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pedro Antonio",
+    "apellido": "Sanchez Guzman",
+    "materia": "Sociales",
+    "aula": "6to A",
+    "turno": "11:00 AM -12:15 PM",
+    "fecha_creados": "9/6/2020",
+    "fecha_eliminados": "11/7/2022"
+
+}
+
+###
+PUT  http://localhost:9000/api/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pedro Antonio",
+    "apellido": "Sanchez Guzman",
+    "materia": "Sociales",
+    "aula": "5to A",
+    "turno": "11:00 AM -12:15 PM",
+    "fecha_creados": "9/6/2020",
+    "fecha_eliminados": "11/7/2022"
+
+}
+
+
+// Probando peticiones para el crud de alumnos
+###
+GET http://localhost:9000/alumnos HTTP/1.1
+
+
+###
+POST http://localhost:9000/alumnos HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "nombre": "Jose",
+    "apellido": "Sanchez Lantigua",
+    "aula": "6to C"
+}
+
+###
+PUT http://localhost:9000/alumnos/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Jose",
+    "apellido": "Sanchez Lantigua",
+    "aula": "6to E"
+}
+
+###
+DELETE http://localhost:9000/alumnos/2 HTTP/1.1
+
+// Probando peticiones para el crud de aulas
+###
+GET http://localhost:9000/aulas HTTP/1.1
+
+### 
+POST http://localhost:9000/aulas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_seccion": "6to C"
+}
+
+
+
+###
+DELETE http://localhost:9000/aulas/2 HTTP/1.1
+
+###
+PUT  http://localhost:9000/aulas/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_seccion": "6to E"
+}
+
+// Probando peticiones para el pequeño crud de clases y horario general
+###
+GET http://localhost:9000/clases HTTP/1.1
+
+###
+POST  http://localhost:9000/clases HTTP/1.1
+Content-Type: application/json
+
+{
+    "horario_general": "8:15 AM - 3:30 PM",
+    "clasesdiarias": "Las materias basicas y talleres",
+    "clasessemanales": "Tutorias extras y talleres de informatica, turismo entre otros",
+    "clasesmensuales": "Las materias basicas, talleres, tutorias y reuniones con los padres"
+}
+
+###
+DELETE http://localhost:9000/clases/2 HTTP/1.1
+
+###
+PUT http://localhost:9000/clases/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "horario_general": "8:15 AM - 3:30 PM",
+    "clasesdiarias": "Las materias basicas y talleres",
+    "clasessemanales": "Tutorias extras y talleres de informatica, turismo entre otros",
+    "clasesmensuales": "Las materias basicas, talleres, tutorias y reuniones con los padres"
+}
